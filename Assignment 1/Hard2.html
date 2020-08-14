@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Printing only those elements which contains number in it in an array</h1>
+
+    <h4>The arrays are</h4>
+    
+    <p>Array1 = ["1a", "a", "2b", "b"]</p>
+    <p>Array2 = ["abc", "abc10"]</p>
+    <p>Array3 = ["abc", "ab10c", "a10bc", "bcd"]</p>
+    <p>Array4 = ["this is a test", "test1"]</p>
+
+    <h5 id="result">The result will be displayed here</h5>
+
+    <script>
+        const numInStr = (params) => 
+        {
+            var array = [];
+            var k = 0;
+            for(var i = 0; i < params.length; i++)
+            {
+                var count = 0;
+                var temp = params[i];
+                var temp1 = temp.split('');
+                for(var j=0; j < temp1.length; j++)
+                {
+                    if( !isNaN(temp1[j]) && temp1[j] != " " )
+                    {
+                        count++;
+                    }
+                }
+                if(count > 0)
+                {
+                    array[k] = temp1.join('');
+                    k++;
+                }
+            }
+            document.write(" [" + array + "] ");
+        }
+
+        numInStr(["1a", "a", "2b", "b"]);
+        numInStr(["abc", "abc10"]);
+        numInStr(["abc", "ab10c", "a10bc", "bcd"]);
+        numInStr(["this is a test", "test1"]);
+    </script>
+</body>
+</html>

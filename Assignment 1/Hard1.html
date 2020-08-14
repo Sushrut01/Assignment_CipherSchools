@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The real type of following javascript variables are</h1>
+    
+    <h4>realType (1) ➞</h4>
+    <h4>realType("a") ➞</h4>
+    <h4>realType(true)</h4>
+    <h4>realType ([])</h4>
+    <h4>realType(null)</h4>
+    
+    <h2>Result will be dislayed below respectively</h2>
+
+    <p id="result"></p>
+
+    <script>
+        const realType = (value) => 
+        {
+        document.getElementById('result').innerHTML += Object.prototype.toString.call(value);
+        }
+        realType (1);
+        realType("a");
+        realType(true);
+        realType ([]);
+        realType(null);
+    </script>
+    
+</body>
+</html>

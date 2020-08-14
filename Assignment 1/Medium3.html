@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Given are the arrays</h1>
+
+    <h3>Array 1 : [1,0,1,0]</h3>
+    <h3>Array 2 : ["The","big","cat"]</h3>
+    <h3>Array 3 : ["John","Tayor","John"]</h3>
+
+    <h1>The arrays after removing repitition are written below</h1>
+
+    <script>
+        const removeDuplicates= (params) => {
+        var uniqueArray = [];
+        
+        for(var i=0; i < params.length; i++)
+        {
+            if(uniqueArray.indexOf(params[i]) === -1) 
+            {
+                uniqueArray.push(params[i]);
+            }
+        }
+        document.write('[' + uniqueArray + ']');
+    }
+    removeDuplicates([1,0,1,0]);
+    removeDuplicates(["The","big","cat"]);
+    removeDuplicates(["John","Taylor","John"]);
+    </script>
+</body>
+</html>

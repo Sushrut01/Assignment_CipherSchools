@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <h1>Check all the Inputs are same or not</h1>
+
+    <input type="text" id="str1" placeholder="Enter string 1">
+    <input type="text" id="str2" placeholder="Enter string 2">
+    <input type="text" id="str3" placeholder="Enter string 3">
+    <input type="text" id="str4" placeholder="Enter string 4">
+    <input type="button" value="Verify" onclick="testJackpot([document.getElementById('str1').value,document.getElementById('str2').value,
+    document.getElementById('str3').value,document.getElementById('str4').value])">
+
+    <p id="result">Result will be shown here</p>
+</body>
+</html>
