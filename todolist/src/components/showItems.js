@@ -5,6 +5,8 @@ import FlipMove from 'react-flip-move';
 
 const showItems = (props) => {
     const items = props.items;
+
+    // if the list is empty a loader will be shown else data will be displayed
     const listItems = items.length ? (items.map(item =>
    {
        return(
@@ -19,6 +21,7 @@ const showItems = (props) => {
 
     return (
         <div>
+            {/* for movie the items like it is flipped while adding or deleting any items used FlipMove */}
             <FlipMove duration={300} easing="ease-in-out">
                 {listItems}
             </FlipMove>
